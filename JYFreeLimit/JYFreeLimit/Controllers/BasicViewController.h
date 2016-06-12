@@ -10,4 +10,17 @@
 
 @interface BasicViewController : UIViewController
 
+//  添加NavigationItem
+- (void)addNavigationItemWithTitle:(NSString *)title
+                      isBackButton:(BOOL)isBackButton
+                           isRight:(BOOL)isRight
+                            target:(id)target
+                            action:(SEL)action;
+//  创建界面
+- (void)creatUI;
+
+//  返回上一页
+- (void)backButtonClick:(UIBarButtonItem *)barButton;
+
+
 @end

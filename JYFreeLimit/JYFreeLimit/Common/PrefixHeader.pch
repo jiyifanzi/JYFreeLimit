@@ -1,0 +1,23 @@
+//
+//  PrefixHeader.pch
+//  JYFreeLimit
+//
+//  Created by qianfeng on 16/6/12.
+//  Copyright (c) 2016年 JiYi. All rights reserved.
+//
+
+#ifndef JYFreeLimit_PrefixHeader_pch
+#define JYFreeLimit_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+//  只做包含，导入一些常用类的头文件
+#import "UIColor+JYColor.h"
+//  使用cocoapods导入的第三方库，需要使用<>导入
+#import <Masonry.h>
+#import <MJRefresh.h>
+
+
+#endif

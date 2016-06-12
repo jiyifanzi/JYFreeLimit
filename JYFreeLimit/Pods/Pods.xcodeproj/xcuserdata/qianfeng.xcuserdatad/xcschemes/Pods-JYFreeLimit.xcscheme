@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5298BD2C59C4AEF052DF97CECEF5093D'
+               BlueprintIdentifier = '1AF818198EC2B69E84111763237CCB89'
                BlueprintName = 'Pods-JYFreeLimit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-JYFreeLimit.a'>

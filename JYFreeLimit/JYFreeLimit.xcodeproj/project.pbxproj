@@ -186,6 +186,9 @@
 		BC21142E1D0D07AE0073F20D /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC21142D1D0D07AE0073F20D /* CustomTabBarController.m */; };
 		BC2114301D0D09BB0073F20D /* Controllers.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC21142F1D0D09BB0073F20D /* Controllers.plist */; };
 		BC2114331D0D10D50073F20D /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2114321D0D10D50073F20D /* CustomNavigationController.m */; };
+		BC2114381D0D3C190073F20D /* UIColor+JYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2114371D0D3C190073F20D /* UIColor+JYColor.m */; };
+		BC2114401D0D52F50073F20D /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC21143F1D0D52F50073F20D /* CategoryViewController.m */; };
+		BC2114431D0D530F0073F20D /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2114421D0D530F0073F20D /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -395,6 +398,15 @@
 		BC21142F1D0D09BB0073F20D /* Controllers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Controllers.plist; sourceTree = "<group>"; };
 		BC2114311D0D10D50073F20D /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomNavigationController.h; path = Controllers/CustomNavigationController.h; sourceTree = "<group>"; };
 		BC2114321D0D10D50073F20D /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomNavigationController.m; path = Controllers/CustomNavigationController.m; sourceTree = "<group>"; };
+		BC2114361D0D3C190073F20D /* UIColor+JYColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+JYColor.h"; path = "Common/UIColor+JYColor.h"; sourceTree = "<group>"; };
+		BC2114371D0D3C190073F20D /* UIColor+JYColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+JYColor.m"; path = "Common/UIColor+JYColor.m"; sourceTree = "<group>"; };
+		BC2114391D0D3F1A0073F20D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = Common/PrefixHeader.pch; sourceTree = "<group>"; };
+		BC21143A1D0D4CA00073F20D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		BC21143B1D0D4CA00073F20D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		BC21143E1D0D52F50073F20D /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryViewController.h; path = Controllers/CategoryViewController.h; sourceTree = "<group>"; };
+		BC21143F1D0D52F50073F20D /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryViewController.m; path = Controllers/CategoryViewController.m; sourceTree = "<group>"; };
+		BC2114411D0D530F0073F20D /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = Controllers/SettingViewController.h; sourceTree = "<group>"; };
+		BC2114421D0D530F0073F20D /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Controllers/SettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,9 +460,10 @@
 		BC2112951D0CF5B40073F20D /* JYFreeLimit */ = {
 			isa = PBXGroup;
 			children = (
-				BC2114101D0D04330073F20D /* Views */,
-				BC21140F1D0D042E0073F20D /* Models */,
-				BC21140E1D0D04240073F20D /* Controllers */,
+				BC2114351D0D3B770073F20D /* Common - 公共类 */,
+				BC2114101D0D04330073F20D /* Views - 视图 */,
+				BC21140F1D0D042E0073F20D /* Models - 模型 */,
+				BC21140E1D0D04240073F20D /* Controllers - 控制器 */,
 				BC21140D1D0D02810073F20D /* Others */,
 			);
 			path = JYFreeLimit;
@@ -762,31 +775,33 @@
 			name = Others;
 			sourceTree = "<group>";
 		};
-		BC21140E1D0D04240073F20D /* Controllers */ = {
+		BC21140E1D0D04240073F20D /* Controllers - 控制器 */ = {
 			isa = PBXGroup;
 			children = (
 				BC2114161D0D04B00073F20D /* 公共视图控制器 */,
+				BC21143D1D0D52650073F20D /* 设置 */,
+				BC21143C1D0D52590073F20D /* 分类 */,
 				BC2114151D0D04680073F20D /* 热榜 */,
 				BC2114141D0D04620073F20D /* 专题 */,
 				BC2114131D0D045C0073F20D /* 免费 */,
 				BC2114121D0D04530073F20D /* 降价 */,
 				BC2114111D0D044E0073F20D /* 限免 */,
 			);
-			name = Controllers;
+			name = "Controllers - 控制器";
 			sourceTree = "<group>";
 		};
-		BC21140F1D0D042E0073F20D /* Models */ = {
+		BC21140F1D0D042E0073F20D /* Models - 模型 */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Models;
+			name = "Models - 模型";
 			sourceTree = "<group>";
 		};
-		BC2114101D0D04330073F20D /* Views */ = {
+		BC2114101D0D04330073F20D /* Views - 视图 */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Views;
+			name = "Views - 视图";
 			sourceTree = "<group>";
 		};
 		BC2114111D0D044E0073F20D /* 限免 */ = {
@@ -855,6 +870,34 @@
 				BC21142F1D0D09BB0073F20D /* Controllers.plist */,
 			);
 			name = plist;
+			sourceTree = "<group>";
+		};
+		BC2114351D0D3B770073F20D /* Common - 公共类 */ = {
+			isa = PBXGroup;
+			children = (
+				BC2114361D0D3C190073F20D /* UIColor+JYColor.h */,
+				BC2114371D0D3C190073F20D /* UIColor+JYColor.m */,
+				BC2114391D0D3F1A0073F20D /* PrefixHeader.pch */,
+			);
+			name = "Common - 公共类";
+			sourceTree = "<group>";
+		};
+		BC21143C1D0D52590073F20D /* 分类 */ = {
+			isa = PBXGroup;
+			children = (
+				BC21143E1D0D52F50073F20D /* CategoryViewController.h */,
+				BC21143F1D0D52F50073F20D /* CategoryViewController.m */,
+			);
+			name = "分类";
+			sourceTree = "<group>";
+		};
+		BC21143D1D0D52650073F20D /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				BC2114411D0D530F0073F20D /* SettingViewController.h */,
+				BC2114421D0D530F0073F20D /* SettingViewController.m */,
+			);
+			name = "设置";
 			sourceTree = "<group>";
 		};
 		C3193ABE7292CFE3CAE574AE /* Pods */ = {
@@ -1182,6 +1225,8 @@
 				BC2114251D0D06C90073F20D /* FreeViewController.m in Sources */,
 				BC21142E1D0D07AE0073F20D /* CustomTabBarController.m in Sources */,
 				BC21141F1D0D06640073F20D /* HotViewController.m in Sources */,
+				BC2114381D0D3C190073F20D /* UIColor+JYColor.m in Sources */,
+				BC2114401D0D52F50073F20D /* CategoryViewController.m in Sources */,
 				BC21142B1D0D07160073F20D /* LimitViewController.m in Sources */,
 				BC2114221D0D069C0073F20D /* SubjectViewController.m in Sources */,
 				BC21129F1D0CF5B40073F20D /* ViewController.m in Sources */,
@@ -1191,6 +1236,7 @@
 				BC21141C1D0D06380073F20D /* AppListViewController.m in Sources */,
 				BC2114331D0D10D50073F20D /* CustomNavigationController.m in Sources */,
 				BC2114281D0D06F60073F20D /* ReductionViewController.m in Sources */,
+				BC2114431D0D530F0073F20D /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1217,6 +1263,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BC2112A11D0CF5B40073F20D /* Base */,
+				BC21143A1D0D4CA00073F20D /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1225,6 +1272,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BC2112A61D0CF5B40073F20D /* Base */,
+				BC21143B1D0D4CA00073F20D /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -1317,6 +1365,7 @@
 			baseConfigurationReference = 173094829BA315D2867D3280 /* Pods-JYFreeLimit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JYFreeLimit/Common/PrefixHeader.pch";
 				INFOPLIST_FILE = JYFreeLimit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1328,6 +1377,7 @@
 			baseConfigurationReference = 6CA74773ABFD46B759CA28F3 /* Pods-JYFreeLimit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JYFreeLimit/Common/PrefixHeader.pch";
 				INFOPLIST_FILE = JYFreeLimit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
