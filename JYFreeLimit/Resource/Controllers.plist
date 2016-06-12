@@ -3,44 +3,44 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>title</key>
-		<string>限免</string>
-		<key>iconName</key>
-		<string>tabbar_limitfree</string>
 		<key>className</key>
 		<string>LimitViewController</string>
+		<key>imageName</key>
+		<string>tabbar_limitfree</string>
+		<key>title</key>
+		<string>限免</string>
 	</dict>
 	<dict>
+		<key>className</key>
+		<string>ReductionViewController</string>
+		<key>imageName</key>
+		<string>tabbar_reduceprice</string>
 		<key>title</key>
 		<string>降价</string>
-		<key>iconName</key>
-		<string>tabbar_reduceprice</string>
-		<key>className</key>
-		<string>ReduceViewController</string>
 	</dict>
 	<dict>
-		<key>title</key>
-		<string>免费</string>
-		<key>iconName</key>
-		<string>tabbar_appfree</string>
 		<key>className</key>
 		<string>FreeViewController</string>
+		<key>imageName</key>
+		<string>tabbar_appfree</string>
+		<key>title</key>
+		<string>免费</string>
 	</dict>
 	<dict>
-		<key>title</key>
-		<string>专题</string>
-		<key>iconName</key>
-		<string>tabbar_subject</string>
 		<key>className</key>
 		<string>SubjectViewController</string>
+		<key>imageName</key>
+		<string>tabbar_subject</string>
+		<key>title</key>
+		<string>专题</string>
 	</dict>
 	<dict>
-		<key>title</key>
-		<string>热榜</string>
-		<key>iconName</key>
-		<string>tabbar_rank</string>
 		<key>className</key>
 		<string>HotViewController</string>
+		<key>imageName</key>
+		<string>tabbar_rank</string>
+		<key>title</key>
+		<string>热榜</string>
 	</dict>
 </array>
 </plist>

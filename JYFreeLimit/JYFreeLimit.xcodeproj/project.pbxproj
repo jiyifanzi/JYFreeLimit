@@ -15,7 +15,6 @@
 		BC2112A41D0CF5B40073F20D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC2112A31D0CF5B40073F20D /* Images.xcassets */; };
 		BC2112A71D0CF5B40073F20D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC2112A51D0CF5B40073F20D /* LaunchScreen.xib */; };
 		BC2112B31D0CF5B40073F20D /* JYFreeLimitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2112B21D0CF5B40073F20D /* JYFreeLimitTests.m */; };
-		BC21136A1D0CF91B0073F20D /* Controllers.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC2112BD1D0CF91A0073F20D /* Controllers.plist */; };
 		BC21136B1D0CF91B0073F20D /* FZKT_GBK.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC2112BF1D0CF91A0073F20D /* FZKT_GBK.ttf */; };
 		BC21136C1D0CF91B0073F20D /* hanyizhuanshu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC2112C01D0CF91A0073F20D /* hanyizhuanshu.ttf */; };
 		BC21136D1D0CF91B0073F20D /* account_candou.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2112C31D0CF91A0073F20D /* account_candou.png */; };
@@ -177,6 +176,16 @@
 		BC2114091D0CF91B0073F20D /* iphone6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2113681D0CF91B0073F20D /* iphone6@2x.png */; };
 		BC21140A1D0CF91B0073F20D /* top_op_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2113691D0CF91B0073F20D /* top_op_bg.png */; };
 		BC21140C1D0CF9440073F20D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BC21140B1D0CF9440073F20D /* Icon.png */; };
+		BC2114191D0D05530073F20D /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2114181D0D05530073F20D /* BasicViewController.m */; };
+		BC21141C1D0D06380073F20D /* AppListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC21141B1D0D06380073F20D /* AppListViewController.m */; };
+		BC21141F1D0D06640073F20D /* HotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC21141E1D0D06640073F20D /* HotViewController.m */; };
+		BC2114221D0D069C0073F20D /* SubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2114211D0D069C0073F20D /* SubjectViewController.m */; };
+		BC2114251D0D06C90073F20D /* FreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2114241D0D06C90073F20D /* FreeViewController.m */; };
+		BC2114281D0D06F60073F20D /* ReductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2114271D0D06F60073F20D /* ReductionViewController.m */; };
+		BC21142B1D0D07160073F20D /* LimitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC21142A1D0D07160073F20D /* LimitViewController.m */; };
+		BC21142E1D0D07AE0073F20D /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC21142D1D0D07AE0073F20D /* CustomTabBarController.m */; };
+		BC2114301D0D09BB0073F20D /* Controllers.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC21142F1D0D09BB0073F20D /* Controllers.plist */; };
+		BC2114331D0D10D50073F20D /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2114321D0D10D50073F20D /* CustomNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -206,7 +215,6 @@
 		BC2112AC1D0CF5B40073F20D /* JYFreeLimitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JYFreeLimitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2112B11D0CF5B40073F20D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC2112B21D0CF5B40073F20D /* JYFreeLimitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFreeLimitTests.m; sourceTree = "<group>"; };
-		BC2112BD1D0CF91A0073F20D /* Controllers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Controllers.plist; sourceTree = "<group>"; };
 		BC2112BF1D0CF91A0073F20D /* FZKT_GBK.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZKT_GBK.ttf; sourceTree = "<group>"; };
 		BC2112C01D0CF91A0073F20D /* hanyizhuanshu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hanyizhuanshu.ttf; sourceTree = "<group>"; };
 		BC2112C31D0CF91A0073F20D /* account_candou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account_candou.png; sourceTree = "<group>"; };
@@ -367,7 +375,26 @@
 		BC2113671D0CF91B0073F20D /* egopv_photo_placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "egopv_photo_placeholder@2x.png"; sourceTree = "<group>"; };
 		BC2113681D0CF91B0073F20D /* iphone6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone6@2x.png"; sourceTree = "<group>"; };
 		BC2113691D0CF91B0073F20D /* top_op_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_op_bg.png; sourceTree = "<group>"; };
-		BC21140B1D0CF9440073F20D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		BC21140B1D0CF9440073F20D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		BC2114171D0D05530073F20D /* BasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicViewController.h; path = Controllers/BasicViewController.h; sourceTree = "<group>"; };
+		BC2114181D0D05530073F20D /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicViewController.m; path = Controllers/BasicViewController.m; sourceTree = "<group>"; };
+		BC21141A1D0D06380073F20D /* AppListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppListViewController.h; path = Controllers/AppListViewController.h; sourceTree = "<group>"; };
+		BC21141B1D0D06380073F20D /* AppListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppListViewController.m; path = Controllers/AppListViewController.m; sourceTree = "<group>"; };
+		BC21141D1D0D06640073F20D /* HotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotViewController.h; path = Controllers/HotViewController.h; sourceTree = "<group>"; };
+		BC21141E1D0D06640073F20D /* HotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotViewController.m; path = Controllers/HotViewController.m; sourceTree = "<group>"; };
+		BC2114201D0D069C0073F20D /* SubjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubjectViewController.h; path = Controllers/SubjectViewController.h; sourceTree = "<group>"; };
+		BC2114211D0D069C0073F20D /* SubjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubjectViewController.m; path = Controllers/SubjectViewController.m; sourceTree = "<group>"; };
+		BC2114231D0D06C90073F20D /* FreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FreeViewController.h; path = Controllers/FreeViewController.h; sourceTree = "<group>"; };
+		BC2114241D0D06C90073F20D /* FreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FreeViewController.m; path = Controllers/FreeViewController.m; sourceTree = "<group>"; };
+		BC2114261D0D06F60073F20D /* ReductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReductionViewController.h; path = Controllers/ReductionViewController.h; sourceTree = "<group>"; };
+		BC2114271D0D06F60073F20D /* ReductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReductionViewController.m; path = Controllers/ReductionViewController.m; sourceTree = "<group>"; };
+		BC2114291D0D07160073F20D /* LimitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LimitViewController.h; path = Controllers/LimitViewController.h; sourceTree = "<group>"; };
+		BC21142A1D0D07160073F20D /* LimitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LimitViewController.m; path = Controllers/LimitViewController.m; sourceTree = "<group>"; };
+		BC21142C1D0D07AE0073F20D /* CustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTabBarController.h; path = Controllers/CustomTabBarController.h; sourceTree = "<group>"; };
+		BC21142D1D0D07AE0073F20D /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTabBarController.m; path = Controllers/CustomTabBarController.m; sourceTree = "<group>"; };
+		BC21142F1D0D09BB0073F20D /* Controllers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Controllers.plist; sourceTree = "<group>"; };
+		BC2114311D0D10D50073F20D /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomNavigationController.h; path = Controllers/CustomNavigationController.h; sourceTree = "<group>"; };
+		BC2114321D0D10D50073F20D /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomNavigationController.m; path = Controllers/CustomNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,14 +448,10 @@
 		BC2112951D0CF5B40073F20D /* JYFreeLimit */ = {
 			isa = PBXGroup;
 			children = (
-				BC21129A1D0CF5B40073F20D /* AppDelegate.h */,
-				BC21129B1D0CF5B40073F20D /* AppDelegate.m */,
-				BC21129D1D0CF5B40073F20D /* ViewController.h */,
-				BC21129E1D0CF5B40073F20D /* ViewController.m */,
-				BC2112A01D0CF5B40073F20D /* Main.storyboard */,
-				BC2112A31D0CF5B40073F20D /* Images.xcassets */,
-				BC2112A51D0CF5B40073F20D /* LaunchScreen.xib */,
-				BC2112961D0CF5B40073F20D /* Supporting Files */,
+				BC2114101D0D04330073F20D /* Views */,
+				BC21140F1D0D042E0073F20D /* Models */,
+				BC21140E1D0D04240073F20D /* Controllers */,
+				BC21140D1D0D02810073F20D /* Others */,
 			);
 			path = JYFreeLimit;
 			sourceTree = "<group>";
@@ -462,8 +485,7 @@
 		BC2112BC1D0CF91A0073F20D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				BC21140B1D0CF9440073F20D /* Icon.png */,
-				BC2112BD1D0CF91A0073F20D /* Controllers.plist */,
+				BC2114341D0D12170073F20D /* plist */,
 				BC2112BE1D0CF91A0073F20D /* Font */,
 				BC2112C11D0CF91A0073F20D /* FreeImage */,
 				BC2113641D0CF91B0073F20D /* picture */,
@@ -715,6 +737,7 @@
 		BC2113641D0CF91B0073F20D /* picture */ = {
 			isa = PBXGroup;
 			children = (
+				BC21140B1D0CF9440073F20D /* Icon.png */,
 				BC2113651D0CF91B0073F20D /* botton_op_bg.png */,
 				BC2113661D0CF91B0073F20D /* egopv_photo_placeholder.png */,
 				BC2113671D0CF91B0073F20D /* egopv_photo_placeholder@2x.png */,
@@ -722,6 +745,116 @@
 				BC2113691D0CF91B0073F20D /* top_op_bg.png */,
 			);
 			path = picture;
+			sourceTree = "<group>";
+		};
+		BC21140D1D0D02810073F20D /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				BC2112961D0CF5B40073F20D /* Supporting Files */,
+				BC21129A1D0CF5B40073F20D /* AppDelegate.h */,
+				BC21129B1D0CF5B40073F20D /* AppDelegate.m */,
+				BC21129D1D0CF5B40073F20D /* ViewController.h */,
+				BC21129E1D0CF5B40073F20D /* ViewController.m */,
+				BC2112A01D0CF5B40073F20D /* Main.storyboard */,
+				BC2112A31D0CF5B40073F20D /* Images.xcassets */,
+				BC2112A51D0CF5B40073F20D /* LaunchScreen.xib */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		BC21140E1D0D04240073F20D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC2114161D0D04B00073F20D /* 公共视图控制器 */,
+				BC2114151D0D04680073F20D /* 热榜 */,
+				BC2114141D0D04620073F20D /* 专题 */,
+				BC2114131D0D045C0073F20D /* 免费 */,
+				BC2114121D0D04530073F20D /* 降价 */,
+				BC2114111D0D044E0073F20D /* 限免 */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BC21140F1D0D042E0073F20D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BC2114101D0D04330073F20D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BC2114111D0D044E0073F20D /* 限免 */ = {
+			isa = PBXGroup;
+			children = (
+				BC2114291D0D07160073F20D /* LimitViewController.h */,
+				BC21142A1D0D07160073F20D /* LimitViewController.m */,
+			);
+			name = "限免";
+			sourceTree = "<group>";
+		};
+		BC2114121D0D04530073F20D /* 降价 */ = {
+			isa = PBXGroup;
+			children = (
+				BC2114261D0D06F60073F20D /* ReductionViewController.h */,
+				BC2114271D0D06F60073F20D /* ReductionViewController.m */,
+			);
+			name = "降价";
+			sourceTree = "<group>";
+		};
+		BC2114131D0D045C0073F20D /* 免费 */ = {
+			isa = PBXGroup;
+			children = (
+				BC2114231D0D06C90073F20D /* FreeViewController.h */,
+				BC2114241D0D06C90073F20D /* FreeViewController.m */,
+			);
+			name = "免费";
+			sourceTree = "<group>";
+		};
+		BC2114141D0D04620073F20D /* 专题 */ = {
+			isa = PBXGroup;
+			children = (
+				BC2114201D0D069C0073F20D /* SubjectViewController.h */,
+				BC2114211D0D069C0073F20D /* SubjectViewController.m */,
+			);
+			name = "专题";
+			sourceTree = "<group>";
+		};
+		BC2114151D0D04680073F20D /* 热榜 */ = {
+			isa = PBXGroup;
+			children = (
+				BC21141D1D0D06640073F20D /* HotViewController.h */,
+				BC21141E1D0D06640073F20D /* HotViewController.m */,
+			);
+			name = "热榜";
+			sourceTree = "<group>";
+		};
+		BC2114161D0D04B00073F20D /* 公共视图控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				BC2114171D0D05530073F20D /* BasicViewController.h */,
+				BC2114181D0D05530073F20D /* BasicViewController.m */,
+				BC21141A1D0D06380073F20D /* AppListViewController.h */,
+				BC21141B1D0D06380073F20D /* AppListViewController.m */,
+				BC21142C1D0D07AE0073F20D /* CustomTabBarController.h */,
+				BC21142D1D0D07AE0073F20D /* CustomTabBarController.m */,
+				BC2114311D0D10D50073F20D /* CustomNavigationController.h */,
+				BC2114321D0D10D50073F20D /* CustomNavigationController.m */,
+			);
+			name = "公共视图控制器";
+			sourceTree = "<group>";
+		};
+		BC2114341D0D12170073F20D /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				BC21142F1D0D09BB0073F20D /* Controllers.plist */,
+			);
+			name = plist;
 			sourceTree = "<group>";
 		};
 		C3193ABE7292CFE3CAE574AE /* Pods */ = {
@@ -937,6 +1070,7 @@
 				BC2113BA1D0CF91B0073F20D /* Detail_btn_middle.png in Resources */,
 				BC2113E51D0CF91B0073F20D /* topic_Cell_Bg.png in Resources */,
 				BC2113D11D0CF91B0073F20D /* tabbar_bg.png in Resources */,
+				BC2114301D0D09BB0073F20D /* Controllers.plist in Resources */,
 				BC2114041D0CF91B0073F20D /* user_total.png in Resources */,
 				BC2114081D0CF91B0073F20D /* egopv_photo_placeholder@2x.png in Resources */,
 				BC21137B1D0CF91B0073F20D /* account_user.png in Resources */,
@@ -958,7 +1092,6 @@
 				BC2113CD1D0CF91B0073F20D /* tabbar_appfree.png in Resources */,
 				BC2113941D0CF91B0073F20D /* cate_list_bg@2x.png in Resources */,
 				BC2113F91D0CF91B0073F20D /* helpphoto_one.png in Resources */,
-				BC21136A1D0CF91B0073F20D /* Controllers.plist in Resources */,
 				BC2113E31D0CF91B0073F20D /* tabbar_subject_press.png in Resources */,
 				BC2112A41D0CF5B40073F20D /* Images.xcassets in Resources */,
 				BC2114071D0CF91B0073F20D /* egopv_photo_placeholder.png in Resources */,
@@ -1046,9 +1179,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC2114251D0D06C90073F20D /* FreeViewController.m in Sources */,
+				BC21142E1D0D07AE0073F20D /* CustomTabBarController.m in Sources */,
+				BC21141F1D0D06640073F20D /* HotViewController.m in Sources */,
+				BC21142B1D0D07160073F20D /* LimitViewController.m in Sources */,
+				BC2114221D0D069C0073F20D /* SubjectViewController.m in Sources */,
 				BC21129F1D0CF5B40073F20D /* ViewController.m in Sources */,
+				BC2114191D0D05530073F20D /* BasicViewController.m in Sources */,
 				BC21129C1D0CF5B40073F20D /* AppDelegate.m in Sources */,
 				BC2112991D0CF5B40073F20D /* main.m in Sources */,
+				BC21141C1D0D06380073F20D /* AppListViewController.m in Sources */,
+				BC2114331D0D10D50073F20D /* CustomNavigationController.m in Sources */,
+				BC2114281D0D06F60073F20D /* ReductionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
