@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5892F525-D1FE-41E9-AB00-EF92739E2D7F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JYFreeLimit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EBBA6CB6DC1DC77936761B6905DA78D0D047E253</key>
+		<string>https://github.com/jiyifanzi/JYFreeLimit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JYFreeLimit/JYFreeLimit.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EBBA6CB6DC1DC77936761B6905DA78D0D047E253</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jiyifanzi/JYFreeLimit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EBBA6CB6DC1DC77936761B6905DA78D0D047E253</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EBBA6CB6DC1DC77936761B6905DA78D0D047E253</string>
+			<key>IDESourceControlWCCName</key>
+			<string>workspace</string>
+		</dict>
+	</array>
+</dict>
+</plist>

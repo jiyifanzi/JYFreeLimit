@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BC7F8E8D1D07F11100981992"
+               BlueprintIdentifier = "BC2112921D0CF5B40073F20D"
                BuildableName = "JYFreeLimit.app"
                BlueprintName = "JYFreeLimit"
                ReferencedContainer = "container:JYFreeLimit.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BC7F8EA61D07F11100981992"
+               BlueprintIdentifier = "BC2112AB1D0CF5B40073F20D"
                BuildableName = "JYFreeLimitTests.xctest"
                BlueprintName = "JYFreeLimitTests"
                ReferencedContainer = "container:JYFreeLimit.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BC7F8EA61D07F11100981992"
+               BlueprintIdentifier = "BC2112AB1D0CF5B40073F20D"
                BuildableName = "JYFreeLimitTests.xctest"
                BlueprintName = "JYFreeLimitTests"
                ReferencedContainer = "container:JYFreeLimit.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BC7F8E8D1D07F11100981992"
+            BlueprintIdentifier = "BC2112921D0CF5B40073F20D"
             BuildableName = "JYFreeLimit.app"
             BlueprintName = "JYFreeLimit"
             ReferencedContainer = "container:JYFreeLimit.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BC7F8E8D1D07F11100981992"
+            BlueprintIdentifier = "BC2112921D0CF5B40073F20D"
             BuildableName = "JYFreeLimit.app"
             BlueprintName = "JYFreeLimit"
             ReferencedContainer = "container:JYFreeLimit.xcodeproj">
@@ -95,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BC7F8E8D1D07F11100981992"
+            BlueprintIdentifier = "BC2112921D0CF5B40073F20D"
             BuildableName = "JYFreeLimit.app"
             BlueprintName = "JYFreeLimit"
             ReferencedContainer = "container:JYFreeLimit.xcodeproj">
