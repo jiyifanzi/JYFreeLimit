@@ -189,6 +189,9 @@
 		BC2114381D0D3C190073F20D /* UIColor+JYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2114371D0D3C190073F20D /* UIColor+JYColor.m */; };
 		BC2114401D0D52F50073F20D /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC21143F1D0D52F50073F20D /* CategoryViewController.m */; };
 		BC2114431D0D530F0073F20D /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2114421D0D530F0073F20D /* SettingViewController.m */; };
+		BC595A231D0E515B00A70E2F /* AppListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC595A221D0E515B00A70E2F /* AppListModel.m */; };
+		BC595A271D0E58BF00A70E2F /* AppListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC595A251D0E58BF00A70E2F /* AppListCell.m */; };
+		BC595A281D0E58BF00A70E2F /* AppListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC595A261D0E58BF00A70E2F /* AppListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -408,6 +411,11 @@
 		BC2114411D0D530F0073F20D /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = Controllers/SettingViewController.h; sourceTree = "<group>"; };
 		BC2114421D0D530F0073F20D /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Controllers/SettingViewController.m; sourceTree = "<group>"; };
 		BC595A201D0E3E4400A70E2F /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		BC595A211D0E515B00A70E2F /* AppListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppListModel.h; path = Model/AppListModel.h; sourceTree = "<group>"; };
+		BC595A221D0E515B00A70E2F /* AppListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppListModel.m; path = Model/AppListModel.m; sourceTree = "<group>"; };
+		BC595A241D0E58BF00A70E2F /* AppListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppListCell.h; path = Views/AppListCell.h; sourceTree = "<group>"; };
+		BC595A251D0E58BF00A70E2F /* AppListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppListCell.m; path = Views/AppListCell.m; sourceTree = "<group>"; };
+		BC595A261D0E58BF00A70E2F /* AppListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AppListCell.xib; path = Views/AppListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -794,6 +802,8 @@
 		BC21140F1D0D042E0073F20D /* Models - 模型 */ = {
 			isa = PBXGroup;
 			children = (
+				BC595A211D0E515B00A70E2F /* AppListModel.h */,
+				BC595A221D0E515B00A70E2F /* AppListModel.m */,
 			);
 			name = "Models - 模型";
 			sourceTree = "<group>";
@@ -801,6 +811,9 @@
 		BC2114101D0D04330073F20D /* Views - 视图 */ = {
 			isa = PBXGroup;
 			children = (
+				BC595A241D0E58BF00A70E2F /* AppListCell.h */,
+				BC595A251D0E58BF00A70E2F /* AppListCell.m */,
+				BC595A261D0E58BF00A70E2F /* AppListCell.xib */,
 			);
 			name = "Views - 视图";
 			sourceTree = "<group>";
@@ -1003,6 +1016,7 @@
 				BC21139B1D0CF91B0073F20D /* category_Finance.jpg in Resources */,
 				BC2113E71D0CF91B0073F20D /* topic_Comment.png in Resources */,
 				BC2113EE1D0CF91B0073F20D /* topic_TopicImage_Default@2x.png in Resources */,
+				BC595A281D0E58BF00A70E2F /* AppListCell.xib in Resources */,
 				BC2113F01D0CF91B0073F20D /* close@2x.png in Resources */,
 				BC2113B21D0CF91B0073F20D /* appproduct_searchbar.png in Resources */,
 				BC2113841D0CF91B0073F20D /* Default6@2x.png in Resources */,
@@ -1231,6 +1245,8 @@
 				BC2114401D0D52F50073F20D /* CategoryViewController.m in Sources */,
 				BC21142B1D0D07160073F20D /* LimitViewController.m in Sources */,
 				BC2114221D0D069C0073F20D /* SubjectViewController.m in Sources */,
+				BC595A271D0E58BF00A70E2F /* AppListCell.m in Sources */,
+				BC595A231D0E515B00A70E2F /* AppListModel.m in Sources */,
 				BC21129F1D0CF5B40073F20D /* ViewController.m in Sources */,
 				BC2114191D0D05530073F20D /* BasicViewController.m in Sources */,
 				BC21129C1D0CF5B40073F20D /* AppDelegate.m in Sources */,

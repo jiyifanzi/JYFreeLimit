@@ -16,12 +16,14 @@
 //  只做包含，导入一些常用类的头文件
 #import "UIColor+JYColor.h"
 #import "Define.h"
+#import "AppListModel.h"
 
 //  使用cocoapods导入的第三方库，需要使用<>导入
 #import <Masonry.h>
 #import <MJRefresh.h>
 #import <AFURLSessionManager.h>
 #import <AFNetworking.h>
+#import <YYModel.h>
 
 
 #endif

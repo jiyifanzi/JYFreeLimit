@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self requestDataWithPage:1 search:@"" cateId:@""];
+    //[self requestDataWithPage:1 search:@"" cateId:@""];
 }
 
 - (instancetype)init {

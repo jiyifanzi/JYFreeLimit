@@ -9,21 +9,34 @@
 #import "AppListViewController.h"
 #import "SettingViewController.h"
 #import "CategoryViewController.h"
+#import "AppListModel.h"
+#import "AppListCell.h"
 
-
-
-@interface AppListViewController ()<UISearchBarDelegate>
+@interface AppListViewController ()<UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
 //  整体展示数据的表格视图
 @property (nonatomic, strong) UITableView * appTableView;
+//  数据源数组
+@property (nonatomic, strong) NSMutableArray * dataSource;
 
 @end
 
 @implementation AppListViewController
 
+#pragma mark - 懒加载
+- (NSMutableArray *)dataSource {
+    if (!_dataSource) {
+        _dataSource = [NSMutableArray array];
+    }
+    return _dataSource;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self requestDataWithPage:1 search:@"" cateId:@""];
+    
 }
 
 
@@ -38,8 +51,21 @@
                      cateId:(NSString *)cateId{
     
     [self.requestManager GET:self.requestURL parameters:@{@"page":[NSNumber numberWithInteger:page], @"number":@20, @"search":search} success:^(NSURLSessionDataTask *task, id responseObject) {
+        //  获取responseObject里面的数据
+        NSArray * plistArray = responseObject[@"applications"];
+        //  将字典数组转换成模型数组
+        //  参数1：模型的类型
+        //  参数2：需要转换的数组
+        NSArray * appArray = [NSArray yy_modelArrayWithClass:[AppListModel class] json:plistArray];
         
-        NSLog(@"%@",responseObject);
+        //  给数据源数组赋值（将解析出来的模型数组放到数据源数组中）
+        self.dataSource = [NSMutableArray arrayWithArray:appArray];
+        
+        //  重新加载
+        [self.appTableView reloadData];
+        
+        NSLog(@"%@",self.dataSource);
+        
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"请求失败:%@",error);
@@ -60,6 +86,12 @@
     self.appTableView = [[UITableView alloc] init];
     self.appTableView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.appTableView];
+    
+    //  tableView注册cell（xib）
+    self.appTableView.rowHeight = 150;
+    self.appTableView.delegate = self;
+    self.appTableView.dataSource = self;
+    [self.appTableView registerNib:[UINib nibWithNibName:@"AppListCell" bundle:nil] forCellReuseIdentifier:@"ApplistCell"];
 
     //  添加约束
     __weak typeof(self) weakself = self;
@@ -81,11 +113,26 @@
     
 }
 
+#pragma mark - UITableView的协议方法
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataSource.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //  去复用池中查看是否有可以复用的cell，如果有就直接返回，没有就创建新的，再返回
+    AppListCell * cell = [tableView dequeueReusableCellWithIdentifier:@"ApplistCell" forIndexPath:indexPath];
+    //  更新数据
+    cell.model = self.dataSource[indexPath.row];
+    //  返回cell
+    return cell;
+}
+
+
 #pragma mark - 添加刷新控件
 - (void)addMJRefresh {
     //  下拉
     self.appTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         // 进入刷新状态后会自动调用这个block
+        [self.appTableView reloadData];
         [self.appTableView.mj_header endRefreshing];
     }];
     
