@@ -13,6 +13,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cate_list_bg2.png" translatesAutoresizingMaskIntoConstraints="NO" id="sZp-M6-ohr">
+                        <rect key="frame" x="0.0" y="0.0" width="379" height="126"/>
+                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="axh-Zf-oNA">
                         <rect key="frame" x="8" y="8" width="80" height="80"/>
                         <constraints>
@@ -39,7 +42,7 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥6.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jd2-JQ-G4Y">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥6.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jd2-JQ-G4Y">
                         <rect key="frame" x="312" y="38" width="42" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="42" id="TFj-RD-pB5"/>
@@ -49,9 +52,9 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1i-Qh-5C1">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1i-Qh-5C1" customClass="JYStarView">
                         <rect key="frame" x="96" y="66" width="110" height="22"/>
-                        <color key="backgroundColor" red="1" green="0.25253582458615786" blue="0.31622994699172602" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="RlM-AV-FeS"/>
                             <constraint firstAttribute="width" constant="110" id="t6f-eg-ekV"/>
@@ -83,12 +86,16 @@
                     <constraint firstAttribute="trailing" secondItem="SZw-3j-Wcm" secondAttribute="trailing" constant="20" id="JEB-jW-pd0"/>
                     <constraint firstItem="rgG-bw-LSN" firstAttribute="centerY" secondItem="axh-Zf-oNA" secondAttribute="centerY" id="Kgl-c7-b8g"/>
                     <constraint firstItem="rgG-bw-LSN" firstAttribute="centerY" secondItem="jd2-JQ-G4Y" secondAttribute="centerY" id="QZ3-rS-hwC"/>
+                    <constraint firstItem="sZp-M6-ohr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SiY-4f-cAZ"/>
                     <constraint firstItem="axC-36-NKv" firstAttribute="top" secondItem="fGl-cv-exL" secondAttribute="bottom" constant="8" id="V54-pi-vlH"/>
                     <constraint firstItem="axh-Zf-oNA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="WzW-xo-BwI"/>
                     <constraint firstAttribute="trailing" secondItem="jd2-JQ-G4Y" secondAttribute="trailing" constant="25" id="dX5-8Q-qs0"/>
                     <constraint firstItem="fGl-cv-exL" firstAttribute="centerX" secondItem="jd2-JQ-G4Y" secondAttribute="centerX" id="f6X-6k-JbK"/>
                     <constraint firstItem="axh-Zf-oNA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="fAr-Rx-4hG"/>
                     <constraint firstItem="rgG-bw-LSN" firstAttribute="leading" secondItem="axh-Zf-oNA" secondAttribute="trailing" constant="8" id="lKg-m4-B0f"/>
+                    <constraint firstItem="sZp-M6-ohr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mfe-sq-m1x"/>
+                    <constraint firstAttribute="trailing" secondItem="sZp-M6-ohr" secondAttribute="trailing" id="rzc-Eo-7h6"/>
+                    <constraint firstAttribute="bottom" secondItem="sZp-M6-ohr" secondAttribute="bottom" id="wQi-io-6yF"/>
                     <constraint firstItem="SZw-3j-Wcm" firstAttribute="leading" secondItem="axh-Zf-oNA" secondAttribute="trailing" constant="8" id="xW8-Zu-aIJ"/>
                     <constraint firstItem="SZw-3j-Wcm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="zLR-tV-xBY"/>
                     <constraint firstItem="axh-Zf-oNA" firstAttribute="bottom" secondItem="fGl-cv-exL" secondAttribute="bottom" id="zto-lT-6H6"/>
@@ -99,10 +106,14 @@
                 <outlet property="iconImageView" destination="axh-Zf-oNA" id="Mfe-mc-oex"/>
                 <outlet property="nameLabel" destination="SZw-3j-Wcm" id="c0M-lh-ZjG"/>
                 <outlet property="priceLabel" destination="jd2-JQ-G4Y" id="HvT-DX-0yS"/>
+                <outlet property="starLevel" destination="r1i-Qh-5C1" id="GPt-lC-LrR"/>
                 <outlet property="timeLabel" destination="rgG-bw-LSN" id="BxS-pW-Kss"/>
                 <outlet property="typeLabel" destination="fGl-cv-exL" id="r9z-yI-oUp"/>
             </connections>
             <point key="canvasLocation" x="290.5" y="242.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="cate_list_bg2.png" width="320" height="100"/>
+    </resources>
 </document>

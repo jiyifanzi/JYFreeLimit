@@ -192,6 +192,8 @@
 		BC595A231D0E515B00A70E2F /* AppListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC595A221D0E515B00A70E2F /* AppListModel.m */; };
 		BC595A271D0E58BF00A70E2F /* AppListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC595A251D0E58BF00A70E2F /* AppListCell.m */; };
 		BC595A281D0E58BF00A70E2F /* AppListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC595A261D0E58BF00A70E2F /* AppListCell.xib */; };
+		BC595A2B1D0E864200A70E2F /* JYStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC595A2A1D0E864200A70E2F /* JYStarView.m */; };
+		BC595A2E1D0EA06200A70E2F /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC595A2D1D0EA06200A70E2F /* CategoryModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -416,6 +418,10 @@
 		BC595A241D0E58BF00A70E2F /* AppListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppListCell.h; path = Views/AppListCell.h; sourceTree = "<group>"; };
 		BC595A251D0E58BF00A70E2F /* AppListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppListCell.m; path = Views/AppListCell.m; sourceTree = "<group>"; };
 		BC595A261D0E58BF00A70E2F /* AppListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AppListCell.xib; path = Views/AppListCell.xib; sourceTree = "<group>"; };
+		BC595A291D0E864200A70E2F /* JYStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYStarView.h; path = Views/JYStarView.h; sourceTree = "<group>"; };
+		BC595A2A1D0E864200A70E2F /* JYStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYStarView.m; path = Views/JYStarView.m; sourceTree = "<group>"; };
+		BC595A2C1D0EA06200A70E2F /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryModel.h; path = Model/CategoryModel.h; sourceTree = "<group>"; };
+		BC595A2D1D0EA06200A70E2F /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryModel.m; path = Model/CategoryModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -804,6 +810,8 @@
 			children = (
 				BC595A211D0E515B00A70E2F /* AppListModel.h */,
 				BC595A221D0E515B00A70E2F /* AppListModel.m */,
+				BC595A2C1D0EA06200A70E2F /* CategoryModel.h */,
+				BC595A2D1D0EA06200A70E2F /* CategoryModel.m */,
 			);
 			name = "Models - 模型";
 			sourceTree = "<group>";
@@ -811,6 +819,8 @@
 		BC2114101D0D04330073F20D /* Views - 视图 */ = {
 			isa = PBXGroup;
 			children = (
+				BC595A291D0E864200A70E2F /* JYStarView.h */,
+				BC595A2A1D0E864200A70E2F /* JYStarView.m */,
 				BC595A241D0E58BF00A70E2F /* AppListCell.h */,
 				BC595A251D0E58BF00A70E2F /* AppListCell.m */,
 				BC595A261D0E58BF00A70E2F /* AppListCell.xib */,
@@ -1243,6 +1253,7 @@
 				BC21141F1D0D06640073F20D /* HotViewController.m in Sources */,
 				BC2114381D0D3C190073F20D /* UIColor+JYColor.m in Sources */,
 				BC2114401D0D52F50073F20D /* CategoryViewController.m in Sources */,
+				BC595A2E1D0EA06200A70E2F /* CategoryModel.m in Sources */,
 				BC21142B1D0D07160073F20D /* LimitViewController.m in Sources */,
 				BC2114221D0D069C0073F20D /* SubjectViewController.m in Sources */,
 				BC595A271D0E58BF00A70E2F /* AppListCell.m in Sources */,
@@ -1255,6 +1266,7 @@
 				BC2114331D0D10D50073F20D /* CustomNavigationController.m in Sources */,
 				BC2114281D0D06F60073F20D /* ReductionViewController.m in Sources */,
 				BC2114431D0D530F0073F20D /* SettingViewController.m in Sources */,
+				BC595A2B1D0E864200A70E2F /* JYStarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

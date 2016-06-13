@@ -26,7 +26,7 @@
 //number 数量
 //search 搜索关键字
 //cate_id 分类
-
+//http://www.1000phone.net:8088/app/iAppFree/api/limited.php?page=1&number=4$cate_id=0
 
 //降价接口
 #define kReduceUrl @"http://www.1000phone.net:8088/app/iAppFree/api/reduce.php?"

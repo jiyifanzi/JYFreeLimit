@@ -29,7 +29,7 @@
     self.title = @"设置";
     
     //  添加自定义的返回按钮
-    [self addNavigationItemWithTitle:@"返回" isBackButton:YES isRight:NO target:self action:@selector(backButtonClick:)];
+    [self addNavigationItemWithTitle:@"返回" isBackButton:YES isRight:NO target:self action:@selector(backButtonClick)];
     //  设置手势代理(自带的滑动返回手势)
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }

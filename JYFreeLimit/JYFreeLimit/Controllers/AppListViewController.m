@@ -19,6 +19,8 @@
 //  数据源数组
 @property (nonatomic, strong) NSMutableArray * dataSource;
 
+@property (nonatomic, strong) NSString * cateId;
+
 @end
 
 @implementation AppListViewController
@@ -31,12 +33,12 @@
     return _dataSource;
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self requestDataWithPage:1 search:@"" cateId:@""];
-    
+
+    [self requestDataWithPage:1 search:@"" cateId:self.cateId];
 }
 
 
@@ -50,7 +52,13 @@
                      search:(NSString *)search
                      cateId:(NSString *)cateId{
     
-    [self.requestManager GET:self.requestURL parameters:@{@"page":[NSNumber numberWithInteger:page], @"number":@20, @"search":search} success:^(NSURLSessionDataTask *task, id responseObject) {
+    NSDictionary * dict = @{@"page":[NSNumber numberWithInteger:page], @"number":@20, @"search":search};
+    if (self.cateId.length > 0) {
+        dict = @{@"page":[NSNumber numberWithInteger:page], @"number":@20, @"search":search,@"cate_id":self.cateId};
+    }
+    
+    //  请求数据
+    [self.requestManager GET:self.requestURL parameters:dict success:^(NSURLSessionDataTask *task, id responseObject) {
         //  获取responseObject里面的数据
         NSArray * plistArray = responseObject[@"applications"];
         //  将字典数组转换成模型数组
@@ -59,13 +67,22 @@
         NSArray * appArray = [NSArray yy_modelArrayWithClass:[AppListModel class] json:plistArray];
         
         //  给数据源数组赋值（将解析出来的模型数组放到数据源数组中）
-        self.dataSource = [NSMutableArray arrayWithArray:appArray];
+        //  判断是否在刷新状态
+        if ([self.appTableView.mj_header isRefreshing]) {
+            //  在下拉刷新，需要删除之前的数据
+            [self.dataSource removeAllObjects];
+        }
+        
+        [self.dataSource addObjectsFromArray:appArray];
+       // self.dataSource = [NSMutableArray arrayWithArray:appArray];
+        
+        //  停止刷新
+        [self.appTableView.mj_header endRefreshing];
+        [self.appTableView.mj_footer endRefreshing];
+        
         
         //  重新加载
         [self.appTableView reloadData];
-        
-        NSLog(@"%@",self.dataSource);
-        
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"请求失败:%@",error);
@@ -88,7 +105,7 @@
     [self.view addSubview:self.appTableView];
     
     //  tableView注册cell（xib）
-    self.appTableView.rowHeight = 150;
+    self.appTableView.rowHeight = 125;
     self.appTableView.delegate = self;
     self.appTableView.dataSource = self;
     [self.appTableView registerNib:[UINib nibWithNibName:@"AppListCell" bundle:nil] forCellReuseIdentifier:@"ApplistCell"];
@@ -117,6 +134,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataSource.count;
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //  去复用池中查看是否有可以复用的cell，如果有就直接返回，没有就创建新的，再返回
     AppListCell * cell = [tableView dequeueReusableCellWithIdentifier:@"ApplistCell" forIndexPath:indexPath];
@@ -132,14 +150,15 @@
     //  下拉
     self.appTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         // 进入刷新状态后会自动调用这个block
-        [self.appTableView reloadData];
-        [self.appTableView.mj_header endRefreshing];
+        //  重新请求数据
+        [self requestDataWithPage:1 search:@"" cateId:self.cateId];
     }];
     
     //  上拉
     self.appTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         // 进入刷新状态后会自动调用这个block
-        [self.appTableView.mj_footer endRefreshing];
+        
+        [self requestDataWithPage:self.dataSource.count / 20 + 1 search:@"" cateId:self.cateId];
     }];
 }
 
@@ -165,6 +184,10 @@
 - (void)categoryButton:(UIBarButtonItem *)barButton {
     CategoryViewController * category = [[CategoryViewController alloc] init];
     category.hidesBottomBarWhenPushed = YES;
+    category.sendValue = ^(NSString * cateID) {
+        self.cateId = cateID;
+        [self.appTableView.mj_header beginRefreshing];
+    };
     [self.navigationController pushViewController:category animated:YES];
 }
 

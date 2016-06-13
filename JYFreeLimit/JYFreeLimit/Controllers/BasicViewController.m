@@ -44,7 +44,7 @@
 }
 
 #pragma mark - 返回按钮的点击事件
-- (void)backButtonClick:(UIBarButtonItem *)barButton {
+- (void)backButtonClick {
     [self.navigationController popViewControllerAnimated:YES];
 }
 

@@ -17,6 +17,7 @@
 #import "UIColor+JYColor.h"
 #import "Define.h"
 #import "AppListModel.h"
+#import "CategoryModel.h"
 
 //  使用cocoapods导入的第三方库，需要使用<>导入
 #import <Masonry.h>

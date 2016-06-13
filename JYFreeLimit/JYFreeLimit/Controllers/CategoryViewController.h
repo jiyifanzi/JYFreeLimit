@@ -10,4 +10,7 @@
 
 @interface CategoryViewController : BasicViewController
 
+//  使用block反向传值：在下一界面声明和调用block，在上一级界面实现block
+@property (nonatomic, copy) void(^sendValue)(NSString * cateId);
+
 @end

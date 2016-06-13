@@ -27,7 +27,7 @@
 - (void)creatUI;
 
 //  返回上一页
-- (void)backButtonClick:(UIBarButtonItem *)barButton;
+- (void)backButtonClick;
 
 
 @end
