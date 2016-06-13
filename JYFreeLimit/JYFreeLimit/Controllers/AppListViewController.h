@@ -10,4 +10,8 @@
 
 @interface AppListViewController : BasicViewController
 
+- (void)requestDataWithPage:(NSInteger)page
+                     search:(NSString *)search
+                     cateId:(NSString *)cateId;
+
 @end

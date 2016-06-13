@@ -17,12 +17,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self requestDataWithPage:1 search:@"" cateId:@""];
+}
+
+- (instancetype)init {
+    if (self = [super init]) {
+        //  为限免的请求路径赋值
+        self.requestURL = kLimitUrl;
+    }
+    return self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 /*
 #pragma mark - Navigation

@@ -22,6 +22,15 @@
     // Do any additional setup after loading the view.
 }
 
+- (instancetype)init {
+    if (self = [super init]) {
+        //  为限免的请求路径赋值
+        self.requestURL = kSubjectUrl;
+    }
+    return self;
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -81,6 +90,8 @@
     self.subjectTableView.mj_footer = footer;
     
 }
+
+
 
 - (void)loadNewDataHeader {
     [self.subjectTableView.mj_header endRefreshing];

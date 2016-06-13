@@ -18,6 +18,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+- (instancetype)init {
+    if (self = [super init]) {
+        //  为限免的请求路径赋值
+        self.requestURL = kFreeUrl;
+    }
+    return self;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

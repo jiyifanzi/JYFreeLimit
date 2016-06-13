@@ -11,6 +11,7 @@
 #import "CategoryViewController.h"
 
 
+
 @interface AppListViewController ()<UISearchBarDelegate>
 
 //  整体展示数据的表格视图
@@ -30,6 +31,21 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - 数据请求
+- (void)requestDataWithPage:(NSInteger)page
+                     search:(NSString *)search
+                     cateId:(NSString *)cateId{
+    
+    [self.requestManager GET:self.requestURL parameters:@{@"page":[NSNumber numberWithInteger:page], @"number":@20, @"search":search} success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        NSLog(@"%@",responseObject);
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"请求失败:%@",error);
+    }];
+}
+
 
 #pragma mark - 创建界面 - 添加navigationItem
 - (void)creatUI {
@@ -72,7 +88,6 @@
         // 进入刷新状态后会自动调用这个block
         [self.appTableView.mj_header endRefreshing];
     }];
-    
     
     //  上拉
     self.appTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{

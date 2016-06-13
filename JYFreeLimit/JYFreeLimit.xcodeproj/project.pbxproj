@@ -407,6 +407,7 @@
 		BC21143F1D0D52F50073F20D /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryViewController.m; path = Controllers/CategoryViewController.m; sourceTree = "<group>"; };
 		BC2114411D0D530F0073F20D /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = Controllers/SettingViewController.h; sourceTree = "<group>"; };
 		BC2114421D0D530F0073F20D /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Controllers/SettingViewController.m; sourceTree = "<group>"; };
+		BC595A201D0E3E4400A70E2F /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -878,6 +879,7 @@
 				BC2114361D0D3C190073F20D /* UIColor+JYColor.h */,
 				BC2114371D0D3C190073F20D /* UIColor+JYColor.m */,
 				BC2114391D0D3F1A0073F20D /* PrefixHeader.pch */,
+				BC595A201D0E3E4400A70E2F /* Define.h */,
 			);
 			name = "Common - 公共类";
 			sourceTree = "<group>";

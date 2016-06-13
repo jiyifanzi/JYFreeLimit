@@ -24,6 +24,20 @@
     [self creatUI];
 }
 
+#pragma mark - 懒加载
+//  实例化网络请求管理者
+- (AFHTTPSessionManager *)requestManager {
+    if (!_requestManager) {
+        _requestManager = [AFHTTPSessionManager manager];
+        //self.requestManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"charset=UTF-8", nil];
+        //  更改json解析器的解析支持文件格式
+        _requestManager.responseSerializer = [AFJSONResponseSerializer serializer];
+        _requestManager.responseSerializer.acceptableContentTypes = [_requestManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    }
+    return _requestManager;
+}
+
+
 #pragma mark - 创建界面
 - (void)creatUI {
     

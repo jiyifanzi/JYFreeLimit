@@ -10,6 +10,13 @@
 
 @interface BasicViewController : UIViewController
 
+//  请求路径
+@property (nonatomic, copy) NSString * requestURL;
+//  网络请求管理者
+@property (nonatomic, strong) AFHTTPSessionManager * requestManager;
+
+
+
 //  添加NavigationItem
 - (void)addNavigationItemWithTitle:(NSString *)title
                       isBackButton:(BOOL)isBackButton
